@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField(blank=True, null=True)),
                 ('name', models.CharField(max_length=200)),
                 ('price', models.DecimalField(decimal_places=2, max_digits=5, validators=[django.core.validators.MinValueValidator(Decimal('0.00'))])),
-                ('image', models.ImageField(upload_to=api.functions.get_image_path)),
+                ('image', models.ImageField(blank=True, null=True, upload_to=api.functions.get_image_path)),
                 ('preparation_time', models.PositiveIntegerField()),
                 ('is_vegetarian', models.BooleanField(default=False)),
             ],

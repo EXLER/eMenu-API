@@ -20,12 +20,15 @@ class Dish(BaseModel):
     price = models.DecimalField(
         decimal_places=2, max_digits=5, validators=[MinValueValidator(Decimal("0.00"))]
     )
-    image = models.ImageField(upload_to=get_image_path)
+    image = models.ImageField(upload_to=get_image_path, null=True, blank=True)
     preparation_time = models.PositiveIntegerField()
     is_vegetarian = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name_plural = "Dishes"
+
     def __str__(self):
-        return f"{self.name}{' (vegetarian)' if self.vegeterian else ''}"
+        return f"{self.name}{' (vegetarian)' if self.is_vegetarian else ''}"
 
 
 class Menu(BaseModel):
