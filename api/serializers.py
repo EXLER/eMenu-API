@@ -3,13 +3,13 @@ from rest_framework import serializers
 from api.models import Menu, Dish
 
 
-class MenuSerializer(serializers.ModelSerializer):
+class MenuSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Menu
         fields = ("id", "name", "description", "created_at", "updated_at", "dishes")
 
 
-class DishSerializer(serializers.ModelSerializer):
+class DishSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Dish
         fields = (

@@ -22,9 +22,14 @@ from rest_framework import routers
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
-from api.views import MenuViewSet, DishViewSet
+from api.views import (
+    MenuViewSet,
+    DishViewSet,
+    PublicMenuViewSet,
+)
 
 router = routers.DefaultRouter()
+router.register("list", PublicMenuViewSet, basename="list")
 router.register("menu", MenuViewSet, basename="menu")
 router.register("dish", DishViewSet, basename="dish")
 
