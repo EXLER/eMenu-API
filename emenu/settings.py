@@ -42,11 +42,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = [
-    "rest_framework",
-    "drf_yasg",
-    "django_filters",
-]
+THIRD_PARTY_APPS = ["rest_framework", "drf_yasg", "django_filters", "django_crontab"]
 
 PROJECT_APPS = [
     "api",
@@ -132,3 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+# Django-crontab
+CRONJOBS = ["0 10 * * *", "api.tasks.send_new_dishes"]
