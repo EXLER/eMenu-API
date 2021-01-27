@@ -9,10 +9,16 @@ services:
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_DB=emenu
+
+    cronjobs:
+        build: .
+        command: ["cron", "-f"]
+
     web:
         build: .
         depends_on:
             - db
+            - cronjobs
         ports:
             - "8000:8000"
         command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
