@@ -1,0 +1,262 @@
+[
+    {
+        "model": "auth.user",
+        "fields": {
+            "password": "pbkdf2_sha256$216000$LsLrWqKjDdKJ$yd2+pb8dNrqGInJSkG/YfItsDnNl8H+nqxgCfZ94BMM=",
+            "last_login": "2021-01-28T13:39:17Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-28T13:35:01Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.dish",
+        "pk": 1,
+        "fields": {
+            "created_at": "2021-01-28T13:40:40.780Z",
+            "updated_at": "2021-01-28T13:40:40.780Z",
+            "description": "Pizza with ham and mushrooms",
+            "name": "Pizza",
+            "price": "19.99",
+            "image": "",
+            "preparation_time": 30,
+            "is_vegetarian": false
+        }
+    },
+    {
+        "model": "api.dish",
+        "pk": 2,
+        "fields": {
+            "created_at": "2021-01-28T13:41:09.460Z",
+            "updated_at": "2021-01-28T13:41:09.460Z",
+            "description": "4 cheese pizza",
+            "name": "Pizza",
+            "price": "22.99",
+            "image": "",
+            "preparation_time": 30,
+            "is_vegetarian": true
+        }
+    },
+    {
+        "model": "api.dish",
+        "pk": 3,
+        "fields": {
+            "created_at": "2021-01-28T13:41:37.766Z",
+            "updated_at": "2021-01-28T13:41:37.766Z",
+            "description": "Spaghetti bolognese",
+            "name": "Spaghetti",
+            "price": "19.99",
+            "image": "",
+            "preparation_time": 45,
+            "is_vegetarian": false
+        }
+    },
+    {
+        "model": "api.dish",
+        "pk": 4,
+        "fields": {
+            "created_at": "2021-01-28T13:42:46.387Z",
+            "updated_at": "2021-01-28T13:42:46.387Z",
+            "description": "Cheese & chicken sandwich",
+            "name": "Sandwich",
+            "price": "12.00",
+            "image": "",
+            "preparation_time": 15,
+            "is_vegetarian": false
+        }
+    },
+    {
+        "model": "api.menu",
+        "pk": 1,
+        "fields": {
+            "created_at": "2021-01-28T13:39:32.092Z",
+            "updated_at": "2021-01-28T13:39:32.092Z",
+            "description": "Empty example menu.",
+            "name": "Empty menu",
+            "dishes": []
+        }
+    },
+    {
+        "model": "api.menu",
+        "pk": 2,
+        "fields": {
+            "created_at": "2021-01-28T13:39:47.045Z",
+            "updated_at": "2021-01-28T13:42:56.395Z",
+            "description": "Example menu with one dish.",
+            "name": "Single dish menu",
+            "dishes": [1]
+        }
+    },
+    {
+        "model": "api.menu",
+        "pk": 3,
+        "fields": {
+            "created_at": "2021-01-28T13:43:10.425Z",
+            "updated_at": "2021-01-28T13:43:10.425Z",
+            "description": "Example menu with all dishes",
+            "name": "Menu with all dishes",
+            "dishes": [1, 2, 3, 4]
+        }
+    },
+    {
+        "model": "api.menu",
+        "pk": 4,
+        "fields": {
+            "created_at": "2021-01-28T13:43:28.110Z",
+            "updated_at": "2021-01-28T13:43:28.110Z",
+            "description": "Example menu with two dishes.",
+            "name": "Two dish menu",
+            "dishes": [3, 4]
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2021-01-28T13:39:32.094Z",
+            "user": ["admin"],
+            "content_type": ["api", "menu"],
+            "object_id": "1",
+            "object_repr": "Empty menu",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2021-01-28T13:39:47.047Z",
+            "user": ["admin"],
+            "content_type": ["api", "menu"],
+            "object_id": "2",
+            "object_repr": "Single dish menu",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2021-01-28T13:40:40.782Z",
+            "user": ["admin"],
+            "content_type": ["api", "dish"],
+            "object_id": "1",
+            "object_repr": "Pizza",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2021-01-28T13:41:09.462Z",
+            "user": ["admin"],
+            "content_type": ["api", "dish"],
+            "object_id": "2",
+            "object_repr": "Pizza (vegetarian)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2021-01-28T13:41:37.768Z",
+            "user": ["admin"],
+            "content_type": ["api", "dish"],
+            "object_id": "3",
+            "object_repr": "Spaghetti",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2021-01-28T13:42:46.390Z",
+            "user": ["admin"],
+            "content_type": ["api", "dish"],
+            "object_id": "4",
+            "object_repr": "Sandwich",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2021-01-28T13:42:56.399Z",
+            "user": ["admin"],
+            "content_type": ["api", "menu"],
+            "object_id": "2",
+            "object_repr": "Single dish menu",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Dishes\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2021-01-28T13:43:10.429Z",
+            "user": ["admin"],
+            "content_type": ["api", "menu"],
+            "object_id": "3",
+            "object_repr": "Menu with all dishes",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2021-01-28T13:43:28.113Z",
+            "user": ["admin"],
+            "content_type": ["api", "menu"],
+            "object_id": "4",
+            "object_repr": "Two dish menu",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2021-01-28T13:43:49.715Z",
+            "user": ["admin"],
+            "content_type": ["auth", "user"],
+            "object_id": "1",
+            "object_repr": "admin",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2021-01-28T13:43:55.831Z",
+            "user": ["admin"],
+            "content_type": ["auth", "user"],
+            "object_id": "1",
+            "object_repr": "admin",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+        }
+    }
+]
